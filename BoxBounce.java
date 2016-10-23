@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.util.ArrayList;
 /**
  * Write a description of class BoxBounce here.
  * 
@@ -15,14 +16,14 @@ public class BoxBounce
 {
     // instance variables - replace the example below with your own
     private Canvas theCanvas;
-    private int xSpeed = 50;
-    private int ySpeed = 50;
+    private ArrayList<BoxBall> balls;
     /**
      * Constructor for objects of class BoxBounce
      */
     public BoxBounce()
     {
-        theCanvas = new Canvas("Box Demo", 600, 600);   
+        theCanvas = new Canvas("Box Demo", 600, 600);
+        balls = new ArrayList<BoxBall>();
     }
     
     public void bounce() {

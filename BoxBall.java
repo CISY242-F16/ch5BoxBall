@@ -88,34 +88,18 @@ public class BoxBall
         xPosition += xSpeed;
 
         //conditional statement to check if it has hit the ground, walls, or ceiling
-        if(yPosition >= (groundPosition - diameter) && xPosition <= (leftWallPosition ) && ySpeed > 0  
-           || yPosition >= (groundPosition - diameter) && xPosition <= (leftWallPosition) && ySpeed < 0) {
-            yPosition = (groundPosition - diameter);
-            xPosition = (leftWallPosition);
-            xSpeed = +xSpeed;//if the ball has hit the left wall and ground, increase xSpeed
-            ySpeed = -ySpeed;//if the ball has hit the left wall and ground, increase ySpeed 
-        }
-        
-        else if(yPosition <= (ceilingPosition + diameter) && xPosition >= (rightWallPosition - diameter) && ySpeed <= 0
-                || yPosition <= (ceilingPosition + diameter) && xPosition >= (rightWallPosition - diameter) && ySpeed >= 0) {
-            yPosition = (ceilingPosition);
-            xPosition = (rightWallPosition - diameter);
-            xSpeed = -xSpeed;//if the ball has hit right wall and ceilng, increase xSpeed
-            ySpeed = +ySpeed;//if the ball has hit right wall and ceilng, increase ySpeed
-        }
-        
-        else if(yPosition >= (groundPosition - diameter) && ySpeed > 0) {
+       if(yPosition >= (groundPosition - diameter) && ySpeed > 0) {
             yPosition = (groundPosition - diameter);
             ySpeed = -ySpeed;//if the ball has hit ground decrease ySpeed
         }
         
-        else if (yPosition <= (ceilingPosition + diameter) && ySpeed <= 0){
+        else if (yPosition <= (ceilingPosition) && ySpeed < 0){
             yPosition = ceilingPosition;
             ySpeed = -ySpeed;//if the ball has hit the ground, reverse ySpeed
         }
         
-        else if(xPosition <= (leftWallPosition) && xSpeed <= 0) {
-           xPosition = (leftWallPosition);
+        else if(xPosition <= (leftWallPosition) && xSpeed < 0) {
+           xPosition = leftWallPosition;
            xSpeed = -xSpeed;//if the ball has hit left wall reverse xSpeed
         }
         
