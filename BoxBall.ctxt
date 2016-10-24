@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=xPos\ yPos\ ballDiameter\ ballColor\ groundPos\ ceilingPos\ leftPos\ rightPos\ drawingCanvas
-comment0.target=BoxBall(int,\ int,\ int,\ java.awt.Color,\ int,\ int,\ int,\ int,\ Canvas)
+comment0.params=xPos\ yPos\ ballDiameter\ ballColor\ groundPos\ ceilingPos\ leftPos\ rightPos\ drawingCanvas\ horSpeed\ verSpeed
+comment0.target=BoxBall(int,\ int,\ int,\ java.awt.Color,\ int,\ int,\ int,\ int,\ Canvas,\ int,\ int)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ BouncingBall\r\n\r\n\ @param\ xPos\ \ the\ horizontal\ coordinate\ of\ the\ ball\r\n\ @param\ yPos\ \ the\ vertical\ coordinate\ of\ the\ ball\r\n\ @param\ ballDiameter\ \ the\ diameter\ (in\ pixels)\ of\ the\ ball\r\n\ @param\ ballColor\ \ the\ color\ of\ the\ ball\r\n\ @param\ groundPos\ \ the\ position\ of\ the\ ground\ (where\ the\ wall\ will\ bounce)\r\n\ @param\ ceilingPos\ \ the\ position\ of\ the\ ceiling\r\n\ @param\ leftPos\ \ the\ position\ of\ the\ left\ wall\r\n\ @param\ rightPos\ \ the\ position\ of\ the\ right\ wall\r\n\ @param\ drawingCanvas\ \ the\ canvas\ to\ draw\ this\ ball\ on\r\n
 comment1.params=
 comment1.target=void\ draw()

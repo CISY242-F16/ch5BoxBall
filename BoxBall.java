@@ -26,8 +26,8 @@ public class BoxBall
     private final int leftWallPosition;//x position of left wall
     private final int rightWallPosition;//x position of right wall
     private Canvas canvas;
-    private int xSpeed = 15;//I couldn't figure out how to randomize the xSpeed without weird stuff happening
-    private int ySpeed = 35;//I couldn't figure out how to randomize the ySpeed without weird stuff happening
+    private int xSpeed;//I couldn't figure out how to randomize the xSpeed without weird stuff happening
+    private int ySpeed;//I couldn't figure out how to randomize the ySpeed without weird stuff happening
 
     /**
      * Constructor for objects of class BouncingBall
@@ -43,7 +43,8 @@ public class BoxBall
      * @param drawingCanvas  the canvas to draw this ball on
      */
     public BoxBall(int xPos, int yPos, int ballDiameter, Color ballColor,
-                        int groundPos, int ceilingPos, int leftPos, int rightPos, Canvas drawingCanvas)
+                        int groundPos, int ceilingPos, int leftPos, int rightPos, Canvas drawingCanvas,
+                        int horSpeed, int verSpeed)
     {
         xPosition = xPos;
         yPosition = yPos;
@@ -54,6 +55,8 @@ public class BoxBall
         leftWallPosition = leftPos;
         rightWallPosition = rightPos;
         canvas = drawingCanvas;
+        xSpeed = horSpeed;
+        ySpeed = verSpeed;
     }
 
     /**
@@ -82,8 +85,8 @@ public class BoxBall
         erase();
             
         // compute new position
-        ySpeed+= GRAVITY;
-        xSpeed+= GRAVITY;
+        //ySpeed+= GRAVITY;
+        //xSpeed+= GRAVITY;
         yPosition += ySpeed;
         xPosition += xSpeed;
 
