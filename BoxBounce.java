@@ -52,7 +52,7 @@ public class BoxBounce
         theCanvas.drawLine(rightWall, 50, rightWall, 550);*/
         
         theCanvas.setVisible(true);//makes the canvas visible
-        for (int i = 0; i < 75; i++){
+        for (int i = 0; i < 50; i++){
             do {
                 randX = rand.nextInt(21)-10;
             }while(randX==0);
