@@ -93,7 +93,7 @@ public class BoxBall
         //conditional statement to check if it has hit the ground, walls, or ceiling
        if(yPosition >= (groundPosition - diameter) && ySpeed > 0) {
             yPosition = (groundPosition - diameter);
-            ySpeed = -ySpeed;//if the ball has hit ground decrease ySpeed
+            ySpeed = -ySpeed;//if the ball has hit ground reverse ySpeed
         }
         
         else if (yPosition <= (ceilingPosition) && ySpeed < 0){

@@ -52,7 +52,7 @@ public class BoxBounce
         theCanvas.drawLine(rightWall, 50, rightWall, 550);*/
         
         theCanvas.setVisible(true);//makes the canvas visible
-        for (int i = 0; i < 50; i++){
+        for (int i = 0; i < 75; i++){
             do {
                 randX = rand.nextInt(21)-10;
             }while(randX==0);
@@ -74,7 +74,7 @@ public class BoxBounce
             }while(yPos==0);
             
             do {
-                diameter = rand.nextInt(25-3)+1+3;
+                diameter = rand.nextInt(35-5)+1+5;
             }while(diameter==0);
             
             balls.add(new BoxBall(xPos, yPos, diameter, new Color(r, g, b), ground, ceiling, leftWall, 
