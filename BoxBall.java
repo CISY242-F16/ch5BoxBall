@@ -26,8 +26,8 @@ public class BoxBall
     private final int leftWallPosition;//x position of left wall
     private final int rightWallPosition;//x position of right wall
     private Canvas canvas;
-    private int xSpeed;//I couldn't figure out how to randomize the xSpeed without weird stuff happening
-    private int ySpeed;//I couldn't figure out how to randomize the ySpeed without weird stuff happening
+    private int xSpeed;
+    private int ySpeed;
 
     /**
      * Constructor for objects of class BouncingBall
@@ -82,13 +82,11 @@ public class BoxBall
     public void move()
     {
         // remove from canvas at the current position
-        erase();
+       erase();
             
         // compute new position
-        //ySpeed+= GRAVITY;
-        //xSpeed+= GRAVITY;
-        yPosition += ySpeed;
-        xPosition += xSpeed;
+       yPosition += ySpeed;
+       xPosition += xSpeed;
 
         //conditional statement to check if it has hit the ground, walls, or ceiling
        if(yPosition >= (groundPosition - diameter) && ySpeed > 0) {
@@ -96,21 +94,21 @@ public class BoxBall
             ySpeed = -ySpeed;//if the ball has hit ground reverse ySpeed
         }
         
-        else if (yPosition <= (ceilingPosition) && ySpeed < 0){
+       else if (yPosition <= (ceilingPosition) && ySpeed < 0){
             yPosition = ceilingPosition;
             ySpeed = -ySpeed;//if the ball has hit the ground, reverse ySpeed
         }
         
-        else if(xPosition <= (leftWallPosition) && xSpeed < 0) {
+       else if(xPosition <= (leftWallPosition) && xSpeed < 0) {
            xPosition = leftWallPosition;
            xSpeed = -xSpeed;//if the ball has hit left wall reverse xSpeed
         }
         
-        else if(xPosition >= (rightWallPosition - diameter) && xSpeed > 0) {
+       else if(xPosition >= (rightWallPosition - diameter) && xSpeed > 0) {
             xPosition = (rightWallPosition - diameter);
             xSpeed = -xSpeed;//if the ball has hit right wall reverse xSpeed
         }
-        else {  //if none of those things happened, keep the x and y speed the same
+       else {//if none of those things happened, keep the x and y speed the same, might be a little redundant
             ySpeed = ySpeed;
             xSpeed = xSpeed;
             yPosition = yPosition;
@@ -118,7 +116,7 @@ public class BoxBall
         }
 
         // draw again at new position
-        draw();
+       draw();
     }
     
     /**

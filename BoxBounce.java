@@ -45,51 +45,57 @@ public class BoxBounce
         int leftWall = 50;
         int rightWall = 550;
         
-        //draws the lines of the boundaries
-        /*theCanvas.drawLine(50, ground, 550, ground);
-        theCanvas.drawLine(50, ceiling, 550, ceiling);
-        theCanvas.drawLine(leftWall, 50, leftWall, 550);
-        theCanvas.drawLine(rightWall, 50, rightWall, 550);*/
+       
         
         theCanvas.setVisible(true);//makes the canvas visible
-        for (int i = 0; i < 50; i++){
+        
+        for (int i = 0; i < 5000; i++){ //establishes how many balls are being stored in the arraylist
             do {
-                randX = rand.nextInt(21)-10;
+                randX = rand.nextInt(21)-10;//randomizes x speed for each ball in arraylist
             }while(randX==0);
         
             do {
-                randY = rand.nextInt(21)-10;
+                randY = rand.nextInt(21)-10;//randomizes y speed for each ball in arraylist
             }while(randY==0);
             
-            r = rand.nextInt(200);
-            g = rand.nextInt(200);
-            b = rand.nextInt(200);
+            r = rand.nextInt(200);//random int between 0-200, passed as red value
+            g = rand.nextInt(200);//random int between 0-200, passed as green value
+            b = rand.nextInt(200);//random int between 0-200, passed as blue value
             
             do {
-                xPos = rand.nextInt(rightWall-leftWall)+1+leftWall;
+                xPos = rand.nextInt(rightWall-leftWall)+1+leftWall;//randomizes starting x position
             }while(xPos==0);
             
             do {
-                yPos = rand.nextInt(ground-ceiling)+1+ceiling;
+                yPos = rand.nextInt(ground-ceiling)+1+ceiling;//randomizes starting y position
             }while(yPos==0);
             
             do {
-                diameter = rand.nextInt(35-5)+1+5;
+                diameter = rand.nextInt(35-5)+1+5;//randomizes diameter
             }while(diameter==0);
             
+            /**
+             * Adds new balls to the ArrayList with all of the randomly generated variables
+             * random color produced by the new Color() constructor
+             */
             balls.add(new BoxBall(xPos, yPos, diameter, new Color(r, g, b), ground, ceiling, leftWall, 
                                   rightWall, theCanvas, randX, randY));
         }
         
         /**
-         * I could think of a way to use a while loop so I used a for loop which gives it a set run time that
-         * can be increased or decreased by changing whatever "i" is less than
+         * While loop makes it so the balls don't stop bouncing, as condition true is never changed
+         * for loop sets all balls to move
          */
         while(true) {
             for(BoxBall b : balls) {
                 b.move(); //begins movement of ball for duration of the loop
             }
             theCanvas.wait(50);
+            
+            /**
+             * draws the lines of the boundaries
+             * redraws lines if "chipped away"
+             */
             theCanvas.drawLine(50, ground, 550, ground);
             theCanvas.drawLine(50, ceiling, 550, ceiling);
             theCanvas.drawLine(leftWall, 50, leftWall, 550);
