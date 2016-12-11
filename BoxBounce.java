@@ -49,7 +49,7 @@ public class BoxBounce
         
         theCanvas.setVisible(true);//makes the canvas visible
         
-        for (int i = 0; i < 5000; i++){ //establishes how many balls are being stored in the arraylist
+        for (int i = 0; i < 100; i++){ //establishes how many balls are being stored in the arraylist
             do {
                 randX = rand.nextInt(21)-10;//randomizes x speed for each ball in arraylist
             }while(randX==0);
