@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=drawingCanvas\ bottomPos\ topPos\ leftPos\ rightPos\ totalBalls
+comment0.target=BoxBall(Canvas,\ int,\ int,\ int,\ int,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ BouncingBall\r\n\r\n\ @param\ bottomPos\ \ position\ of\ bottom\ wall\r\n\ @param\ topPos\ position\ of\ top\ wall\r\n\ @param\ leftPos\ position\ of\ left\ wall\r\n\ @param\ rightPos\ positon\ of\ right\ wall\r\n\ @param\ totalBalls\ number\ of\ balls\ in\ arrayList<Ball>\ ballList\r\n\ @param\ drawingCanvas\ \ the\ canvas\ to\ draw\ this\ ball\ on\r\n
+comment1.params=totalBalls
+comment1.target=int\ getNumBalls(int)
+comment1.text=\ \r\n\ returns\ a\ number\ of\ balls\ between\ 5\ and\ 50\r\n\ \r\n\ @param\ totalBalls\ \ \ \ if\ totalBalls\ is\ not\ inbetween\ 5\ and\ 50\ than\ a\ random\ number\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ between\ 5\ and\ 50\ is\ returned,\ other\ wise\ totalBalls\ is\ returned\r\n
+comment2.params=
+comment2.target=void\ initiateBallList()
+comment2.text=\r\n\ fills\ arrayList\ of\ Balls\ with\ Ball\ objects\ with\ random\ x\ and\ y\ starting\ postions,\ color,\ diameter,\ and\ horizontal\ and\ vertical\ ball\ speeds.\r\n
+comment3.params=index\ xPos\ yPos
+comment3.target=boolean\ isOnTopOfAnother(int,\ int,\ int)
+comment3.text=\r\n\ returns\ whether\ a\ ball\ object\ rests\ in\ the\ space\ an\ alreday\ created\ ball\ object\ occupies\r\n\ \r\n\ @param\ index\ \ the\ element\ ballList\ is\ currently\ initiallizing\r\n\ @param\ xPos\ the\ horizontal\ position\ of\ ball\ to\ see\ if\ it\ is\ available\r\n\ @param\ yPos\ the\ verticle\ position\ of\ ball\ to\ see\ if\ it\ is\ availiable\r\n\ \r\n\ @return\ whether\ the\ xPos\ and\ yPos\ are\ available\ to\ draw\ a\ ball\ in\ that\ sapce\ on\ the\ canvas\r\n
+comment4.params=list\ index\ xPos\ yPos
+comment4.target=boolean\ isOnTopOfAnother(java.util.ArrayList,\ int,\ int,\ int)
+comment4.text=\r\n\ returns\ whether\ a\ ball\ object\ rests\ in\ the\ space\ an\ alreday\ created\ ball\ object\ occupies\r\n\ \r\n\ @param\ list\ the\ arrayList\ of\ Balls\ to\ get\ their\ locations\ to\ be\ compared\ to\ \r\n\ @param\ index\ \ the\ element\ ballList\ is\ currently\ initiallizing\r\n\ @param\ xPos\ the\ horizontal\ position\ of\ ball\ to\ see\ if\ it\ is\ available\r\n\ @param\ yPos\ the\ verticle\ position\ of\ ball\ to\ see\ if\ it\ is\ availiable\r\n\ \r\n\ @return\ whether\ the\ xPos\ and\ yPos\ are\ available\ to\ draw\ a\ ball\ in\ that\ sapce\ on\ the\ canvas\r\n
+comment5.params=
+comment5.target=void\ drawList()
+comment5.text=\r\n\ Draw\ this\ arrayLis\ of\ Ball\ objects\ at\ their\ current\ positions\ onto\ the\ canvas.\r\n
+comment6.params=
+comment6.target=void\ erase()
+comment6.text=\r\n\ Erase\ this\ arrayList\ of\ Ball\ objects\ at\ their\ current\ positions.\r\n
+comment7.params=
+comment7.target=void\ move()
+comment7.text=\r\n\ Move\ all\ the\ Ball\ objects\ in\ arrayList\ ballList\ according\ to\ their\ positions\ and\ speeds\ and\ redraws\ them.\r\n
+numComments=8
